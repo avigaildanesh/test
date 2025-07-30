@@ -49,9 +49,9 @@ services:
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
   db-init:
-    image: pingcap/tidb
+    image: mysql:8
     depends_on:
       - tidb
     volumes:
-      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
-    entrypoint: ["/bin/sh", "-c", "sleep 15 && mysql -h tidb -P 4000 -u root < /docker-entrypoint-initdb.d/init.sql"]
+      - ./db/init.sql:/init.sql
+    entrypoint: ["/bin/sh", "-c", "sleep 15 && mysql -h tidb -P 4000 -u root < /init.sql"]
