@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.fdb036c1.css","mappings":"AAAA,KACE,sBAAuB,CAEvB,eAAgB,CADhB,iBAEF","sources":["App.css"],"sourcesContent":[".App {\r\n  font-family: sans-serif;\r\n  text-align: center;\r\n  margin-top: 50px;\r\n}\r\n"],"names":[],"sourceRoot":""}
